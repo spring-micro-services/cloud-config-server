@@ -1,0 +1,14 @@
+#This is just backup file for edit
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud configuration server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/spring-micro-services/config-repo.git
+management:
+  security:
+    enabled: false

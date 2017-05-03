@@ -1,0 +1,17 @@
+server:
+  port: 8888
+  #since eureka server default port is 8761 and config server port is 8888
+  #choose eureka server port instead of config server 
+  #seems to be issue with UI
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: dev
+      server:
+        git:
+          uri: https://github.com/spring-micro-services/config-repo.git
+management:
+  security:
+    enabled: false
